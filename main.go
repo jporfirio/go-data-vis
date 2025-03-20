@@ -15,7 +15,7 @@ type DataFile struct {
 }
 
 func main() {
-	file, err := os.ReadFile("data.json")
+	file, err := os.ReadFile("data/data.json")
 	if err != nil {
 		log.Fatalf("Error reading file: %v\n", err)
 	}
