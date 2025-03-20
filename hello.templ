@@ -1,0 +1,22 @@
+package main
+
+script withParameters(a string, b string, c int) {
+	console.log(a, b, c);
+}
+
+script withoutParameters() {
+	alert("hello");
+}
+
+templ Button(text string) {
+	<button onClick={ withParameters("test", text, 123) } onMouseover={ withoutParameters() } type="button">{ text }</button>
+}
+
+templ hello(name string) {
+  <div>Hello, { name }</div>
+  <hr style="padding: 10px" 
+    if true {
+      class="superb"
+    }
+  />
+}
