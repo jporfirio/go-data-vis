@@ -1,17 +1,16 @@
-# fly.toml app configuration file generated for go-data-vis-1toc8q on 2025-03-20T21:12:54Z
+# fly.toml app configuration file generated for go-data-vis on 2025-03-20T22:18:05Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'go-data-vis-1toc8q'
+app = 'go-data-vis'
 primary_region = 'gru'
 
 [build]
-  [build.args]
-    GO_VERSION = '1.23.5'
 
-[env]
-  PORT = '8080'
+[[mounts]]
+  source = 'data'
+  destination = '/data'
 
 [http_service]
   internal_port = 8080
